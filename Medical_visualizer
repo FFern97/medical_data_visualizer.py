@@ -27,7 +27,7 @@ def draw_cat_plot():
 
     # 7
 
-fig = sns.catplot(x="variable", y="total", data= df_cat, hue="value", kind="bar", col = 'cardio').fig
+fig = sns.catplot(x = "variable", y = "total", data= df_cat, hue = "value", kind = "bar", col = 'cardio').fig
 
 
     # 8
@@ -42,13 +42,19 @@ fig = sns.catplot(x="variable", y="total", data= df_cat, hue="value", kind="bar"
 # 10
 def draw_heat_map():
     # 11
-    df_heat = None
+    df_heat = df [
+        (df['ap_lo'] <= ['ap_hi']) &
+        (df['height'] >= ['height'].quantile(0.025)) &
+        (df['height'] <= ['height'].quantile(0.975)) &
+        (df['weight'] >= ['weight'].quantile(0.025)) &
+        (df['weight'] <= ['weight'].quantile(0..quantile(0.025))) 
+    ]
 
     # 12
-    corr = None
+    corr = df_heat.corr(method='pearson')
 
     # 13
-    mask = None
+    mask = np.triu(corr)
 
 
 
