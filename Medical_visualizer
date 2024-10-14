@@ -11,8 +11,8 @@ df['overweight'] = (df['weight'] / ((df['height'] / 100) ** 2)).apply (lambda x 
 
 # 3
 
-df['cholesterol'] = df['cholesterol'].apply(lambda x: 0 if == 1 else 1) 
-df['gluc'] = df['gluc'].apply(lambda x: 0 if == 1 else 1)
+df['cholesterol'] = df['cholesterol'].apply(lambda x: 0 if x == 1 else 1) 
+df['gluc'] = df['gluc'].apply(lambda x: 0 if x == 1 else 1)
 
  
 # 4
